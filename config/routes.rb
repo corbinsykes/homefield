@@ -1,6 +1,4 @@
 Ohio::Application.routes.draw do
-  devise_for :users
-
   root :to => 'welcome#index'
   get '/search' => 'bars#search'
   get '/teams' => 'teams#index'
