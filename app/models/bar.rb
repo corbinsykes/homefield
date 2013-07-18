@@ -1,4 +1,4 @@
 class Bar < ActiveRecord::Base
   belongs_to :team
-  has_many :users, through: :teams
+  has_many :users, through: :team
 end

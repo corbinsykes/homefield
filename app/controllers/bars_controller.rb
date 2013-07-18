@@ -12,10 +12,20 @@ include Yelp::V2::Search::Request
              :token => 't7Ko_f9BIUaZvp9_dAxZVgduB34D9CJs',
              :token_secret => '3sxgmFjk_i_kl2ZfbVRttq2Y3AM')
     @response = client.search(request)
-    fave_bar = Bar.new
-    fave_bar.name = @response.name
-    fave_bar.rating = @response.rating
-    fave_bar.phone = @response.phone
-    fave_bar.save
+  end
+
+  def favorite
+    fave = Bar.new
+    fave.name = params[:name]
+    fave.rating = params[:rating]
+    fave.phone = params[:phone]
+    fave.save
+    current_user.bars << fave
+
+    redirect_to user_path(current_user.id)
+  end
+
+  def saved
+
   end
 end

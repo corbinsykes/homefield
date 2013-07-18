@@ -6,6 +6,10 @@ Ohio::Application.routes.draw do
 
   get '/search' => 'bars#search'
   get '/teams' => 'teams#index'
-  get '/users' => 'users#index'
-  post '/bars/favorite' => 'bars#favorite', as: 'favorite_bar'
+  get '/users' => 'users#index', as: 'all_users'
+  post '/bars/favorite/:name' => 'bars#favorite', as: 'favorite_bar'
+  get '/bars/favorite' => 'bars#saved', as: 'saved_bars'
+  get '/users/:id' => 'users#show', as: 'user'
+
+
 end

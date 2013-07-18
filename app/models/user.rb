@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :bars
-  has_one :team
+  belongs_to :team
 
   attr_accessible :name, :email, :password, :password_confirmation
 end

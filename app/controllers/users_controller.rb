@@ -4,7 +4,8 @@ def index
   @users = User.all
 end
 
-def favorite
+def show
+  @user = User.find(params[:id])
 end
 
 end

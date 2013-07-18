@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130718184620) do
+ActiveRecord::Schema.define(:version => 20130718204755) do
 
   create_table "bars", :force => true do |t|
-    t.string "name"
-    t.string "rating"
-    t.string "phone"
+    t.string  "name"
+    t.string  "rating"
+    t.string  "phone"
+    t.integer "team_id"
+    t.integer "user_id"
+  end
+
+  create_table "bars_users", :id => false, :force => true do |t|
+    t.integer "bar_id"
+    t.integer "user_id"
   end
 
   create_table "teams", :force => true do |t|

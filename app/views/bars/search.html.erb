@@ -1,4 +1,4 @@
-<h1>Search</h1>
+<h1>Your Team, Your City, Your Bar!</h1>
 
 <form action='/search' method='get'>
   <input type="text" name="term" placeholder="team">
@@ -16,7 +16,7 @@
       <li>Rating: <%= business["rating"] %></li>
       <li>Phone: <%= business["phone"] %></li>
     </ul>
-    <%= button_to("Favorite", favorite_bar_path) %></br>
+    <%= button_to("Favorite", favorite_bar_path(business["name"], rating: business["rating"], phone: business["phone"])) %></br>
 
 <% end %>
 <% end %>
