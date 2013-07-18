@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rails-erd'
 
-gem 'sqlite3'
 
 gem 'yelpster'
 gem 'devise', github: 'plataformatec/devise'
@@ -46,6 +45,7 @@ group :development, :test do
                             # https://github.com/banister/binding_of_caller
   gem 'meta_request'        # Supporting gem for Rails Panel (Google Chrome extension for Rails development).
                             # https://github.com/dejan/rails_panel/tree/master/meta_request
+  gem 'sqlite3'
 end
 
 # To use ActiveModel has_secure_password
