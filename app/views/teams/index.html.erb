@@ -1,6 +1,8 @@
-<h1>Select Your Team</h1>
+<h1>Pick a team.</h1>
 
-<h2>AFC North</h2>
+<div class="row">
+  <div class="span6">
+  <h2>AFC North</h2>
 <% @afcn.each do |team| %>
 <li>
 <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
@@ -35,7 +37,9 @@
 <% end %>
 </a>
 </li>
+</div>
 
+<div class="span6">
 <h2>NFC North</h2>
 <% @nfcn.each do |team| %>
 <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
@@ -71,3 +75,5 @@
 <% end %>
 </a>
 </li>
+</div>
+</div>

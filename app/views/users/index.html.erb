@@ -1,8 +1,6 @@
-<h1 class="hero-unit">Users</h1>
-
+<h1>Fan Profile</h1>
 <% @users.each do |user| %>
   <a href="/users/<%= user.id %>">
     <%= user.name %>
   </a>
-  <ul><li><%= user.email %></li></ul>
 <% end %>

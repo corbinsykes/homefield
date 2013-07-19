@@ -7,16 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul class="hmenu">
-    <%= render 'devise/menu/registration_items' %>
-    <%= link_to "Search", search_path %>
-    <%= link_to "Fans", all_users_path %>
-    <%= render 'devise/menu/login_items' %>
-  </ul>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-<%= yield %>
-
+  <div class="container">
+    <%= render '/layouts/navbar' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
 </body>
 </html>

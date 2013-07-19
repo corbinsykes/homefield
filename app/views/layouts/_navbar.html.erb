@@ -1,0 +1,11 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><%= link_to "Search", search_path %></li>
+      <li><%= link_to "Fans", all_users_path %></li>
+      <li><%= render 'devise/menu/registration_items' %></li>
+      <li><%= render 'devise/menu/login_items' %></li>
+    </ul>
+  </div>
+</div>
