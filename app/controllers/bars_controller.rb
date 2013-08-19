@@ -24,8 +24,4 @@ include Yelp::V2::Search::Request
 
     redirect_to user_path(current_user.id)
   end
-
-  def saved
-
-  end
 end
