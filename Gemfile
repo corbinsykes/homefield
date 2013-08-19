@@ -14,6 +14,7 @@ gem 'dotenv-rails'
 
 group :production do
   gem 'pg'
+  gem 'newrelic_rpm'
 end
 
 gem 'bootstrap-sass', '~> 2.3.2.0'
