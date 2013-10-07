@@ -1,79 +1,81 @@
-<h1>Pick a team.</h1>
+<h1 id="pick-team">Pick a team.</h1>
 
-<div class="row">
-  <div class="span6">
-  <h2>AFC North</h2>
-<% @afcn.each do |team| %>
-<li>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+<div id="AFC">
+  <img class="logo" src="http://www.officialsgl.com/wp-content/uploads/2013/07/AFC-logo.png">
 
-<h2>AFC South</h2>
-<% @afcs.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+  <h2 class="division">AFC North</h2>
+    <% @afcn.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 
-<h2>AFC East</h2>
-<% @afce.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+  <h2 class="division">AFC South</h2>
+    <% @afcs.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 
-<h2>AFC West</h2>
-<% @afcw.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+  <h2 class="division">AFC East</h2>
+    <% @afce.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
+
+  <h2 class="division">AFC West</h2>
+    <% @afcw.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 </div>
 
-<div class="span6">
-<h2>NFC North</h2>
-<% @nfcn.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+<div id="NFC">
+  <img class="logo" src="http://www.officialsgl.com/wp-content/uploads/2013/07/nfclogo-300x220.jpg">
 
-<h2>NFC South</h2>
-<% @nfcs.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+  <h2 class="division">NFC North</h2>
+    <% @nfcn.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 
-<h2>NFC East</h2>
-<% @nfce.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
+  <h2 class="division">NFC South</h2>
+    <% @nfcs.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 
-<h2>NFC West</h2>
-<% @nfcw.each do |team| %>
-<a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
-<li>
-  <%= team.city %>
-<% end %>
-</a>
-</li>
-</div>
+  <h2 class="division">NFC East</h2>
+    <% @nfce.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
+
+  <h2 class="division">NFC West</h2>
+    <% @nfcw.each do |team| %>
+    <a href="/search?term=<%= team.city %>+<%= team.name %>&city=<%= params[:city] %>">
+    <p class="team">
+      <%= team.city %>
+    <% end %>
+    </a>
+    </p>
 </div>
