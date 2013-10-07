@@ -1,5 +1,4 @@
 Ohio::Application.routes.draw do
-  devise_for :users
 
   # As per devise
   root :to => 'welcome#index'

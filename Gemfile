@@ -8,7 +8,6 @@ gem 'rails-erd'
 
 
 gem 'yelpster'
-gem 'devise', github: 'plataformatec/devise'
 
 gem 'dotenv-rails'
 

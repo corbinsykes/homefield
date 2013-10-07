@@ -1,23 +1,19 @@
-<h1>Pick a City.</h1>
-<h1>Pick a Team.</h1>
+<div id="new-search">
+  <a href="/"><h1 id="pick-team">New Search<h1></a>
+</div>
 
-<form action='/search' method='get'>
-  <input type="text" name="city" placeholder="city"></br>
-  <input type="text" name="term" placeholder="team"></br>
-<button>Search</button>
-</form>
+<div id="results">
+  <% if @response["businesses"] %>
+  <h1 id="pick-team">Watch the Game Here!</h1></br></br>
+  <% @response["businesses"].each do |business| %>
+    <p class="division">
+      <%= link_to business["name"], business["url"] %>
+    </p>
 
-<% if @response["businesses"] %>
-<h1>Results</h1>
-<% @response["businesses"].each do |business| %>
-  <li>
-    <%= link_to business["name"], business["url"] %>
-  </li>
-    <ul>
-      <li>Rating: <%= business["rating"] %></li>
-      <li>Phone: <%= business["phone"] %></li>
-    </ul>
-    <%= button_to("Favorite", favorite_bar_path(business["name"], rating: business["rating"], phone: business["phone"])) %></br>
-
-<% end %>
-<% end %>
+        <p class="team">Rating: <%= business["rating"] %></p>
+        <p class="team">Phone: <%= business["phone"] %></p>
+      </br>
+      </br>
+  <% end %>
+  <% end %>
+</div>
